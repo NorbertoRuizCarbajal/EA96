@@ -1,0 +1,89 @@
+//Tercer ejercicio
+
+class Result {
+
+    /*
+     * Complete the 'birthdayCakeCandles' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts INTEGER_ARRAY candles as parameter.
+     */
+
+    public static int birthdayCakeCandles(List<Integer> candles) {
+
+     int numVelas = 0;
+     int velaGrande = 0;
+
+     for(int i = 0; i < candles.size() ; i++){
+        if(candles.get(i) > velaGrande){
+
+            velaGrande = candles.get(i);
+
+        }
+
+
+     }
+
+     for(int i = 0; i < candles.size() ; i++){
+
+        if (candles.get(i) == velaGrande){
+
+            numVelas ++;
+        }
+
+
+     }
+
+        return numVelas;
+    }
+
+}
+
+
+///Segundo Ejercicio
+
+class Result {
+
+    /*
+     * Complete the 'compareTriplets' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER_ARRAY a
+     *  2. INTEGER_ARRAY b
+     */
+
+    public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+        int alicePoints = 0;
+        int bobPoints = 0;
+
+
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i) > b.get(i)) {
+                alicePoints++;
+            }else if (a.get(i) < b.get(i)) {
+                bobPoints++;
+            }
+        }
+
+
+        return Arrays.asList(alicePoints, bobPoints);
+    }
+}
+
+
+//Primer Ejercicio
+
+class Result {
+
+    public static int simpleArraySum(List<Integer> arreglo) {
+        
+        int suma = 0;
+
+        for (int num : arreglo) {
+            suma += num;
+        }
+        
+        return suma;
+    }
+}
